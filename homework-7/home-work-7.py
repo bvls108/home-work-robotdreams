@@ -1,29 +1,29 @@
-started = True
 
-while started == True:
-
-    dic = {"Ганна" : 1111, "Марина" : 2222, "Віктор": 3333}
-
-    def amount(dic):
-        print(len(dic))
-
-    def add(key, value):
-        dic[key] = value
-        print("Нові дані записано. Нова телефонна книга:")
-        print(dic)
-
-    def delete(key):
-        del dic[key]
+dic = {"Ганна" : 1111, "Марина" : 2222, "Віктор": 3333}
 
 
-    def list_f():
-        print(dic.keys())
+def amount(dic):
+    print(len(dic))
 
-    def show(key):
-        print("Інформація за іменем:")
-        print(dic[key])
+def add(key, value):
+    dic[key] = value
+    print("Нові дані записано. Нова телефонна книга:")
+    print(dic)
 
-    key = input("Введіть команду - ")
+def delete(key):
+    del dic[key]
+
+
+def list_f():
+    print(dic.keys())
+
+def show(key):
+    print("Інформація за іменем:")
+    print(dic[key])
+
+while True:
+
+    key = input("Введіть команду (stats, add, delete, list, show): ")
 
     if key == "stats":
         print("Кількість записів у телефонній книзі:")
@@ -36,8 +36,8 @@ while started == True:
             name = input("Дане ім'я контакту вже існує. Введіть нове ім'я контакту або введіть команду stop для введення нової команди")
 
         if name == "stop":
-            started = False
-            started = True
+            continue
+
         else:
             number = input("Нове ім'я контакту записано. Введіть номер нового контакту:")
             add(name, number)
@@ -48,9 +48,8 @@ while started == True:
             print("Ім'я контакту не існує")
             name_d = input("Ім'я контакту не існує. Введіть ім'я контакту для видалення або введіть команду stop для введення нової команди")
 
-        if name_d == "stop":
-            started = False
-            started = True
+        if name == "stop":
+            continue
 
         else:
             delete(name_d)
@@ -68,9 +67,9 @@ while started == True:
             print("Ім'я контакту не існує")
             name_show = input("Ім'я контакту не існує. Введіть існуюче ім'я контакту для виведенгня інфо або введіть команду stop для введення нової команди")
 
-        if name_show == "stop":
-            started = False
-            started = True
+        if name == "stop":
+            continue
+
         else:
             show(name_show)
 
