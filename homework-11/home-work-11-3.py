@@ -4,7 +4,10 @@ class CtxManager:
         print('==========')
 
     def __exit__(self, type, value, traceback):
+        if value:
+            print(value)
         print('==========')
+        return True
 
 
 with CtxManager():
