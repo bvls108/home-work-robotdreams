@@ -8,4 +8,4 @@ def fib(n):
 
 l = list(fib(a))
 
-print(l)
+print(l[a-1])
