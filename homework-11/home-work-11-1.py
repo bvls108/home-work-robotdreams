@@ -1,12 +1,12 @@
 
-
 def decotator_to_func(func):
-    def deco_func():
+    def deco_func(*args, **kwargs):
         print(f'Назва функції - {func}')
-        func()
+        result = func(*args, **kwargs)
         from datetime import datetime
         current_datetime = datetime.now()
         print(f"Час виконання функції - {current_datetime}")
+        return result
     return deco_func
 
 @decotator_to_func
