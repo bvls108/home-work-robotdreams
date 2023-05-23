@@ -5,12 +5,11 @@ def main():
 
     cur = conn.cursor()
 
-    cur.execute('''CREATE TABLE IF NOT EXISTS Table1 (ID INTEGER PRIMARY KEY NOT NULL, first_name TEXT, last_name TEXT, age INTEGER)''')
+    cur.execute('''CREATE TABLE IF NOT EXISTS Table1 (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, first_name TEXT, last_name TEXT, age INTEGER)''')
 
     conn.commit()
 
     conn.close()
-
 
 if __name__ == '__main__':
     main()
