@@ -10,7 +10,7 @@ def main():
 
         cur.execute(
             '''SELECT purchase.id, purchase.date, users.first_name, users.last_name
-                FROM purchase, users''')
+                FROM purchase join users on purchase.user_id = users.id''')
 
         results = cur.fetchall()
 

@@ -10,7 +10,9 @@ def main():
 
         cur.execute(
             '''SELECT users.id, users.first_name, users.last_name, books.title
-                FROM books, users ORDER BY users.id''')
+                from purchase
+                join users on purchase.user_id=users.id
+                join books on purchase.book_id=books.id ORDER BY users.id''')
 
         results = cur.fetchall()
 
