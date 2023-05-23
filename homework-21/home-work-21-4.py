@@ -5,7 +5,7 @@ def main():
 
     cur = conn.cursor()
 
-    cur.execute('''SELECT age, COUNT (age) FROM users GROUP BY AGE ORDER BY AGE''')
+    cur.execute('''SELECT age, COUNT (age) FROM users GROUP BY AGE ORDER BY COUNT (age) DESC, AGE ''')
 
 
     results = cur.fetchall()
