@@ -1,0 +1,16 @@
+body {font-family: Arial;}
+h1 {font-size:32pt;}
+p {font-size: 14pt;}
+.picture img {width: 20%;}
+h1 {font-family: Verdana; text-shadow: 3pt 3pt 5pt black} 
+h1 em {font-weight: normal;}
+header {text-align: center;}
+main {text-align: left}
+footer {text-align: right;}
+footer {border-top-width: 2pt; border-top-style: dotted; border-top-color: lightgrey;}
+footer {width: 90%; min-width:500px;}
+footer {margin-left: 50pt; margin-top:50pt;}
+table.pricelist th, table.pricelist td {border: green thick solid; padding: 3px;}
+table.pricelist thead th {color: white; background-color: grey;}
+tbody th[colspan] {text-align: left;}
+tbody td:last-child:not(:only-child) {border: none; background-color: lightgrey; text-align: center;}
